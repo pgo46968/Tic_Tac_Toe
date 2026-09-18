@@ -62,7 +62,7 @@ button {
     padding: 12px 24px;
     font-size: 1.2em;
     font-weight: bold;
-    background-color: rgb(114, 195, 224);
+    background-color: rgb(134, 194, 216);
     color: rgb(14, 0, 0);
     border: none;
     border-radius: 8px;
@@ -73,7 +73,7 @@ button {
 }
 
 button:hover {
-    background-color: rgb(35, 203, 236);
+    background-color: rgb(236, 229, 35);
 }
 
 button:active {
