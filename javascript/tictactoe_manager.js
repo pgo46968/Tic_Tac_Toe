@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (game.winner) {
       if (game.winner === "Draw") {
-        statusText.textContent = "The game ended in a draw.!";
+        statusText.textContent = "The game ended in a draw!";
       } else {
         statusText.textContent = `The player ${game.winner} won! 🎉`;
 
