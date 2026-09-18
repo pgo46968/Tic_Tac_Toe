@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <h1>Tic Tac Toe</h1>
+    <div id="status">It's player X's turn.</div>
+    <div class="board">
+      <div class="cell" data-index="0"></div>
+      <div class="cell" data-index="1"></div>
+      <div class="cell" data-index="2"></div>
+      <div class="cell" data-index="3"></div>
+      <div class="cell" data-index="4"></div>
+      <div class="cell" data-index="5"></div>
+      <div class="cell" data-index="6"></div>
+      <div class="cell" data-index="7"></div>
+      <div class="cell" data-index="8"></div>
+    </div>
+    <button id="reset">Restart game</button>
+
+    <!-- Substitui a secção do #status e adiciona os botões de modo -->
+    <div
+      id="mode-selection"
+      style="margin-bottom: 20px; display: flex; gap: 10px"
+    >
+      <button id="mode-2p" class="active">2 Players</button>
+      <button id="mode-pc">Player vs PC</button>
+    </div>
+    <!-- <div id="status">It's player X's turn.</div> -->
+
+    <!-- Estrutura MVC / Separação de Lógica -->
+    <script src="javascript/tictactoe_object.js"></script>
+    <script src="javascript/tictactoe_manager.js"></script>
+  </body>
+</html>

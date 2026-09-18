@@ -1,0 +1,104 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #efefaa;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+#status {
+    font-size: 1.5em;
+    margin-bottom: 25px;
+    font-weight: 600;
+    color: #34495e;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 8px;
+    background-color: #2c3e50;
+    padding: 8px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.cell {
+    background-color: #ecf0f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5em;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    touch-action: manipulation; /* Otimização para touchscreen (previne zoom de duplo clique) */
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.cell:hover {
+    background-color: #bdc3c7;
+}
+
+.cell.x {
+    color: #f17832;
+}
+
+.cell.o {
+    color: #109af6;
+}
+
+button {
+    margin-top: 30px;
+    padding: 12px 24px;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: rgb(117, 224, 114);
+    color: rgb(14, 0, 0);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    touch-action: manipulation;
+    box-shadow: 0 4px 6px rgba(0,0,0,1);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: rgb(35, 203, 236);
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Responsividade para ecrãs menores / smartphones */
+@media (max-width: 400px) {
+    .board {
+        grid-template-columns: repeat(3, 85px);
+        grid-template-rows: repeat(3, 85px);
+    }
+    .cell {
+        font-size: 3em;
+    }
+}
+
+    /* Efeito para a linha vencedora */
+.cell.win {
+    background-color: #f1c40f; /* Amarelo dourado de destaque */
+    color: #fff;
+    transform: scale(1.05); /* Pequeno efeito de zoom na vitória */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
